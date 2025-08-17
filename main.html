@@ -11,10 +11,10 @@
 		function secondHighest(arr) {
 			//Write your code here
 			if(arr.length<=1 || arr[0]==arr[arr.length-1]){
-				return "-Infinity";
+				return -Infinity;
 			}
-			let h1=Number.MIN_VALUE;
-			let h2=Number.MIN_VALUE;
+			let h1=-Infinity;
+			let h2=-Infinity;
 			for(let i=0;i<arr.length;i++){
 				let val=arr[i];
 				if(val>h1){
