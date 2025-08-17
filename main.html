@@ -10,7 +10,20 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			
+			if(arr.length<=1 || arr[0]==arr[arr.length-1]){
+				return "-Infinity";
+			}
+			let h1=Number.MIN_VALUE;
+			let h2=Number.MIN_VALUE;
+			for(let i=0;i<arr.length;i++){
+				let val=arr[i];
+				if(val>h1){
+					h2=h1;
+					h1=val;
+					
+				}else if(val<h1 && val>h2) h2=val;
+			}
+			return h2;
 		}
 
 		function Main() {
@@ -19,7 +32,7 @@
 			for (var i = 0; i < n; i++) {
 				arr[i] = prompt("Enter element " + (i+1));
 			}
-			alert(secondHighest(arr));
+			alert(secondHighest(arr)); 
 		}
 		Main();
 	</script>
